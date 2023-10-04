@@ -1,0 +1,205 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #121213;
+  &__logo { 
+    margin: 1rem;
+    margin-bottom: 0;
+    @include tablet-viewport {
+      display: none;
+    }
+  }
+
+  &__logo2 {
+    margin: 1rem;
+    margin-bottom: 0;
+    display: none;
+    @include tablet-viewport {
+      display: flex;
+    }
+  }
+
+  &__contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+    @include tablet-viewport {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1rem 0;
+      margin: 0 2rem;
+    }
+
+    @include desktop-viewport {
+      max-width: 80rem;
+      margin: 0 auto;
+    }
+  }
+
+  img {
+    height: 3rem;
+  }
+
+  &__nav {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1rem;
+
+    @include tablet-viewport {
+      width: auto;
+      flex-direction: row;
+    }
+
+    // Add the hover effect for the entire header
+    &:hover {
+      top: 100%; // Slide down the entire nav when hovered
+    }
+  }
+
+  &__active {
+    @include inactive-nav-link-style;
+    width: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &__inactive {
+    @include inactive-nav-link-style;
+    width: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
+  &__mobile-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .header__mobile-menu-icon {
+      height: 2rem;
+      margin: 1rem;
+    }
+
+    @include tablet-viewport {
+      display: none;
+    }
+  }
+
+  &__nav-mobile {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    @include tablet-viewport {
+      display: none;
+    }
+  }
+
+  &__mobile-link {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #000;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
+
+  &__mobile-menu.open {
+    .header__nav-mobile {
+      display: flex;
+    }
+  }
+
+  &__nav.mobile-hidden {
+    display: none;
+
+    @include tablet-viewport {
+      display: inline-flex;
+    }
+  }
+
+  &__services-holder {
+    display: inline-block;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  &__desktop-services-link {
+    @extend .header__active;
+    // position: relative;
+
+    &:hover .header__services-dropdown {
+      display: flex;
+    }
+
+    .header__services-dropdown {
+      flex-direction: column;
+      display: none;
+      position: absolute;
+      top: calc(100% + -30px); 
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      background-color: #121213;
+      min-width: 10rem;
+      z-index: 101;
+      gap: 3rem;
+      left: 0;
+      width: 100%;
+      max-height: none; /* Keep dropdown always visible */
+      transition: none; /* Remove transition for immediate visibility */
+      justify-content: right;
+      padding-right: 10rem;
+
+
+      @include tablet-viewport {
+        display: flex;
+        flex-direction: row;
+        line-height: 2;
+      }
+
+      a {
+        text-decoration: none;
+        color: #BDC5D5;
+        padding-bottom: 1rem;
+        transition: background-color 0.3s ease;
+        &:hover {
+          color: #05ccef;
+        }
+      }
+    }
+  }
+
+  .header__desktop-services-link:hover .header__services-dropdown {
+    display: flex;
+  }
+  li {
+    list-style: none;
+    color: #f0f0f0;
+  }
+}
+
+

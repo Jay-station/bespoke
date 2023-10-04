@@ -1,0 +1,64 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Contact {
+  background-image: url("../../assets/796346002-huge.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__header {
+    padding: 2rem;
+    color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &__form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__label {
+    font-weight: bold;
+    font-size: 0.75rem;
+    color: white;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  &__textarea {
+    height: 120px;
+  }
+
+  &__button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #b91313;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken(#b91313, 10%);
+    }
+  }
+}

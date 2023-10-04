@@ -1,0 +1,69 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Services {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet-viewport {
+    flex-direction: row;
+  }
+
+  &__header {
+    color: rgb(253, 56, 66);
+    text-align: center;
+  }
+
+  &__holder {
+    background-color: #3e4454;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.25rem;
+    width: 80%;
+    box-shadow: 4px 4px 4px #ddff00;
+    overflow: hidden; 
+    min-height: 40vh;
+    transition: transform 0.2s ease; 
+  
+    &:hover {
+      transform: scale(1.05); 
+    }
+    @include tablet-viewport {
+      width: 30%;
+    }
+  }
+
+  &__title {
+    color: #dddddd;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0.625rem 0; 
+    z-index: 2;
+  }
+
+  &__list {
+    margin-top: 0.625rem;
+  }
+
+  &__description {
+    font-size: 12px;
+    margin: 0.625rem 0;
+    color: #ffffff;
+  }
+
+  &__name li {
+    font-size: 0.75rem;
+    margin: 0.3125rem 0 0.3125rem 1rem;
+    color: #ffffff;
+    list-style-type: circle;
+  }
+
+  img {
+    height: 3rem;
+  }
+}

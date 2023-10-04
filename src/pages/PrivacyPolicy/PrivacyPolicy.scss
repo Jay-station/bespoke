@@ -1,0 +1,40 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Policy {
+  margin: 1rem;
+
+  &__holder {
+    margin: 1rem;
+  }
+
+  &__header {
+    margin: 1rem;
+    color: #fff;
+  }
+
+  &__title {
+    background-color: #1f455c;
+    border-radius: 4px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  &__descriptions {
+    color: #f5f5f5;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__holder img {
+    height: 2rem;
+    margin: 1rem 0rem 0rem 1rem;
+  }
+}

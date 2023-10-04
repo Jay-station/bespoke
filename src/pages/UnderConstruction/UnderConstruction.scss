@@ -1,0 +1,52 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.UC {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10rem;
+    @include tablet-viewport {
+        flex-direction: row; 
+        margin-top: 8rem;
+    }
+
+  &__holder {
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      text-align: left; 
+      padding: 2rem; 
+      align-self: center;
+    @include tablet-viewport {
+    width: 40%;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    line-height: 1.1;
+    color: #FD3842;
+  }
+
+  &__text {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    &-image {
+        height: 4rem;
+        align-self: flex-start;
+        margin-top: 9rem;
+    }
+  }
+
+  &__image {
+    height: 35rem;
+  }
+}

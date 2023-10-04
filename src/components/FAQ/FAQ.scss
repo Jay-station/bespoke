@@ -1,0 +1,44 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.FAQ {
+    color: aliceblue;
+    line-height: 1.5rem;
+    &__header {
+        text-align: center;
+        margin-top: 2rem;
+        color: rgb(253, 56, 66);
+    }
+    &__content {
+        margin: 2rem;
+        list-style: none;
+    }
+    &__QHolder {
+        display: flex;
+        border-radius: 4px;
+        background: rgb(0, 26, 56);
+        box-shadow: 4px 4px 4px #05ccef;
+        margin-bottom: 2rem;
+        align-items: center;
+        padding-left: 1rem;
+    }
+    &__Q {
+        color: #dbdbdb;
+        font-weight: 800; 
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+    &__A {
+        margin-top: 1rem;
+        padding-bottom: 1rem; 
+        line-height: 3;
+        }
+
+    &__icon {
+            height: 2rem;
+        }
+        
+    
+}

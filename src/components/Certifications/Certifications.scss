@@ -1,0 +1,41 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Certification {
+  &__holder {
+    display: flex;
+    flex-direction: column;
+    background:#FD3842;
+    align-items: center;
+    // overflow: hidden;
+    padding: 1rem 0;
+    // white-space: nowrap;
+  }
+  @keyframes slide {
+    from {
+        transform: translateX(-100%) ;
+    }
+    to {transform: translateX(0);}
+  }
+  &__badge {
+    display: inline-block;
+  //  animation: 25s slide infinite linear;
+  //  transition: animation-play-state 1s;
+  }
+  &__badge img {
+    height: 4rem; 
+    margin: 0.625rem; 
+    border-radius: .5rem;
+  }
+  &__title {
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    }
+}
+

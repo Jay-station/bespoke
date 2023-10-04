@@ -1,0 +1,107 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Ad-container {
+    background-color: #fff; /* Set background color to white */
+}
+
+.Ad {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+    width: 100%;
+    @include tablet-viewport {
+        justify-content: space-between;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__holder {
+        padding: 20px;
+        margin: 10px;
+        justify-content: space-around;
+        z-index: 3;
+        flex-basis: calc(33.33% - 20px); /* Each holder takes one-third of the available space with some margin */
+        flex-grow: 1; /* Distribute available space evenly among holders */
+        &:hover {
+            transform: scale(1.05); /* Enlarge the holder by 5% on hover */
+        }
+        &-title {
+            color: #FD3842;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            line-height: 2rem;
+        }
+        &-text {
+            line-height: 1.5rem;
+        }
+    }
+
+    & img {
+        height: 5rem;
+        margin: 1rem 0rem 2rem 0rem;
+        @include tablet-viewport {
+            height: 7rem;
+        }
+        &:hover img {
+            transform: scale(1.05) rotate(360deg); /* Enlarge the image by 5% and rotate it 360 degrees on hover */
+        }
+    }
+}
+
+.Header {
+    color: #FD3842;
+    padding: 2rem 0rem 1rem 2rem;
+    font-size: 2rem;
+}
+
+.hero1 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin-left: 1rem;
+    @include tablet-viewport {
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        gap: 2rem;
+    }
+    // & img {
+    //     width: 100%;
+    //     @include tablet-viewport {
+    //         width: 75%;
+    //     }
+    // }
+    &-text {
+        margin-top: 2rem;
+        line-height: 1.5rem;
+        @include tablet-viewport {
+            width: 100%;
+        }
+    }
+    &-blurb {
+        margin-top: 1rem;
+    }
+}
+
+.row {
+    flex-direction: column;
+    @include tablet-viewport {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    }
+}

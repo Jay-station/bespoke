@@ -1,0 +1,47 @@
+.Footer{
+    padding: 1rem;
+
+  
+
+&__rights{
+    text-align: center;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    bottom: 32px;
+    left: 0;
+    width: 100%;
+    color: white;
+}
+&__rights p{
+    margin-bottom: 1rem;
+    
+}
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    &__links a  {
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            color: white;
+            font-size: 0.75rem;
+          
+           
+           }
+    &__socials {
+        display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    }
+    
+    &__socials img {
+        height: 2rem;
+    }
+};
