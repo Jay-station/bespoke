@@ -28,12 +28,10 @@ const Header = () => {
     // Do nothing when submenu is hovered to keep the dropdown open
   };
 
-  
-// Defined a function to handle when the mouse leaves the dropdown
+  // Defined a function to handle when the mouse leaves the dropdown
   const handleServicesDropdownLeave = () => {
     setServicesDropdownOpen(false);
   };
-
 
   return (
     <div className="header">
@@ -62,23 +60,23 @@ const Header = () => {
               Home
             </Link>
             <div>
-            <div>
-        <div
-          className={`header__mobile-link ${
-            isServicesDropdownOpen ? "active" : ""
-          }`}
-          onMouseLeave={handleServicesDropdownLeave}
-        >
-          Services
-          {isServicesDropdownOpen && (
-            <Submenu
-              isOpen={isServicesDropdownOpen}
-              onMouseEnter={handleSubMenuHover}
-              onMouseLeave={handleSubMenuHover}
-            />
-          )}
-        </div>
-      </div>
+              <div>
+                <div
+                  className={`header__mobile-link ${
+                    isServicesDropdownOpen ? "active" : ""
+                  }`}
+                  onMouseLeave={handleServicesDropdownLeave}
+                >
+                  Services
+                  {isServicesDropdownOpen && (
+                    <Submenu
+                      isOpen={isServicesDropdownOpen}
+                      onMouseEnter={handleSubMenuHover}
+                      onMouseLeave={handleSubMenuHover}
+                    />
+                  )}
+                </div>
+              </div>
             </div>
             <Link to="/about-us" className="header__mobile-link">
               About Us

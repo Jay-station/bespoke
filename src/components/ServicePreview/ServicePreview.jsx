@@ -18,10 +18,10 @@ const ServicePreview = () => {
           link: "/security-testing",
         },
         {
-          name: "Advisory & Program Development",
+          name: "Threat Risk Assessments, Advisory & Program development",
           caption: "Strategic Guidance for Stronger Security",
           description:
-            "Unlock the power of proactive cybersecurity with our Advisory & Program Development services. Our expert consultants work hand-in-hand with your organization to craft a customized security strategy, implement best practices, and develop robust programs to safeguard your digital assets and stay ahead of evolving threats",
+            "Unlock the power of proactive cybersecurity with our Threat Risk Assessments, Advisory & Program development services. Our expert consultants work hand-in-hand with your organization to craft a customized security strategy, implement best practices, and develop robust programs to safeguard your digital assets and stay ahead of evolving threats",
           link: "/advisory%26program-development",
         },
         {
@@ -58,8 +58,15 @@ const ServicePreview = () => {
     },
   ];
 
+  const defaultService = initialServices.find(
+    (category) =>
+      category.title === "CyberSecurity" &&
+      category.list.some((item) => item.name === "Security Testing")
+  );
+
+  // Set the selectedService state to the default service
   const [selectedService, setSelectedService] = useState(
-    initialServices[1].list[0]
+    defaultService ? defaultService.list[0] : null
   );
 
   const handleServiceClick = (item) => {
