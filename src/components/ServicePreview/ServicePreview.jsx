@@ -71,6 +71,10 @@ const ServicePreview = () => {
 
   const handleServiceClick = (item) => {
     setSelectedService(item);
+    window.scrollTo({
+      top: document.querySelector(".PreviewServices__label").offsetTop,
+      behavior: "smooth", // This adds a smooth scrolling effect
+    });
   };
 
   return (

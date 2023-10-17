@@ -11,12 +11,20 @@
   &__title {
     color: rgb(253, 56, 66);
     padding-top: 1rem;
-     margin-left: 4rem;
+     margin-left: 1rem;
+     font-size: 2rem;
+     margin-bottom: 2rem;
+     @include tablet-viewport {
+      margin-left: 3rem;
+     }
+     @include desktop-viewport {
+      margin-left: 4rem;
+     }
   }
   &__blurb {
     text-align: left;
     line-height: 1.7;
-    margin: 1rem;
+    margin: 0rem 1rem 1rem 0rem;
     color: #dddddd;
     font-size: 1.25rem;
     width: 90%;
@@ -165,6 +173,7 @@
     padding-bottom: 0.5rem; 
     text-align: left;
     cursor: pointer;
+    transition: transform 0.2s;
     &:hover {
       transform: scale(1.05); /* Enlarge on hover */
       color: #05ccef;

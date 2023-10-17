@@ -2,10 +2,10 @@ import React from "react";
 import Hero from "../../components/Hero/Hero";
 import "./Homepage.scss";
 import Certifications from "../../components/Certifications/Certifications";
-// import FAQ from "../../components/FAQ/FAQ";
 import ThreatMap from "../../components/ThreatMap/ThreatMap";
 import ServicePreview from "../../components/ServicePreview/ServicePreview";
 import WhyUs from "../../components/whyUs/whyUs";
+import Work from "../../components/Work/Work";
 
 const Homepage = () => {
   return (
@@ -15,7 +15,7 @@ const Homepage = () => {
           <Hero />
         </article>
         <section>
-          <ThreatMap />
+          <Work />
         </section>
         <article>
           <ServicePreview />

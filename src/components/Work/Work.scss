@@ -1,0 +1,117 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Work {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem 0;
+
+  &__holder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    position: relative;
+    width: 90%;
+    cursor: pointer;
+  }
+
+  &__badge {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .badge {
+    opacity: 0.7;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1.25rem 1rem;
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    
+    &:hover {
+      transform: scale(1.1);
+      background-color: rgb(255, 255, 255);
+      opacity: 1; 
+    }
+
+
+    &.active {
+      opacity: 1;
+    }
+
+    .badge-img {
+      width: 10rem;
+      height: 10rem;
+      // object-fit: cover;
+      transition: transform 0.2s; // Apply the transition to badge images
+    }
+  }
+
+  .badge-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    align-items: center;
+    width: 100%;
+    // overflow-x: hidden;
+  }
+
+  &badge-container::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__title {
+    color: #fd3842;
+    font-size: 2rem;
+    text-align: left;
+    line-height: 1.7;
+    margin: 1rem;
+    font-weight: 600;
+    width: 90%;
+    align-self: center;
+  }
+
+  &__blurb {
+    text-align: left;
+    line-height: 1.7;
+    margin: 1rem;
+    font-size: 1.25rem;
+    width: 90%;
+    align-self: center;
+  }
+
+  & img {
+    height: 4rem;
+  }
+
+  @keyframes shiftToLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes shiftToRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

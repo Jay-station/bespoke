@@ -16,12 +16,6 @@ const Certifications = () => {
           <img src={cert3} alt="Certification Icon" />
           <img src={cert4} alt="Certification Icon" />
         </article>
-        {/* <article className="Certification__badge">
-          <img src={cert1} alt="Certification Icon" />
-          <img src={cert2} alt="Certification Icon" />
-          <img src={cert3} alt="Certification Icon" />
-          <img src={cert4} alt="Certification Icon" />
-        </article> */}
       </div>
     </>
   );

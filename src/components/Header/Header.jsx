@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation, useHistory } from "react-router-dom";
 import logo from "../../assets/BC logo kit/BCimage2.svg";
 import logo2 from "../../assets/BC logo kit/Color logo - no background.svg";
 import cross from "../../assets/cross.svg";
@@ -13,7 +13,7 @@ const Header = () => {
     location.pathname.startsWith("/") || location.pathname === "/";
   const isLinkActive = location.pathname.startsWith("/");
 
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(true);
   const [isServicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const handleMobileMenuToggle = () => {
@@ -28,11 +28,14 @@ const Header = () => {
     // Do nothing when submenu is hovered to keep the dropdown open
   };
 
-  // Defined a function to handle when the mouse leaves the dropdown
-  const handleServicesDropdownLeave = () => {
-    setServicesDropdownOpen(false);
+  const handleSubMenuMouseEnter = () => {
+    setServicesDropdownOpen(true);
   };
 
+  const handleSubMenuMouseLeave = () => {
+    setServicesDropdownOpen(false);
+  };
+  console.log("Heloooo", isServicesDropdownOpen);
   return (
     <div className="header">
       <div className="header__contents">
@@ -65,7 +68,6 @@ const Header = () => {
                   className={`header__mobile-link ${
                     isServicesDropdownOpen ? "active" : ""
                   }`}
-                  onMouseLeave={handleServicesDropdownLeave}
                 >
                   Services
                   {isServicesDropdownOpen && (
@@ -95,6 +97,7 @@ const Header = () => {
           <Link
             to="/"
             className={isLinkActive ? "header__active" : "header__inactive"}
+            onClick={handleMobileMenuToggle}
           >
             Home
           </Link>
@@ -108,35 +111,39 @@ const Header = () => {
                 className={`header__desktop-services-link ${
                   isServicesDropdownOpen ? "active" : ""
                 }`}
-                onMouseEnter={handleServicesDropdownToggle}
-                onMouseLeave={handleServicesDropdownToggle}
+                onMouseEnter={handleSubMenuMouseEnter}
+                onMouseLeave={handleSubMenuMouseLeave}
+                onClick={handleServicesDropdownToggle}
               >
                 Services
-                {isServicesDropdownOpen && (
-                  <Submenu
-                    isOpen={isServicesDropdownOpen}
-                    onMouseEnter={handleSubMenuHover}
-                    onMouseLeave={handleSubMenuHover}
-                  />
-                )}
               </div>
             </div>
           </section>
+          {isServicesDropdownOpen && (
+            <Submenu
+              onMouseEnter={handleSubMenuMouseEnter}
+              onMouseLeave={handleSubMenuMouseLeave}
+              onClickLink={handleMobileMenuToggle}
+            />
+          )}
           <Link
             to="/about-us"
             className={isLinkActive ? "header__active" : "header__inactive"}
+            onClick={handleMobileMenuToggle}
           >
             About Us
           </Link>
           <Link
             to="/contact-us"
             className={isLinkActive ? "header__active" : "header__inactive"}
+            onClick={handleMobileMenuToggle}
           >
             Contact Us
           </Link>
           <Link
             to="/faq"
             className={isLinkActive ? "header__active" : "header__inactive"}
+            onClick={handleMobileMenuToggle}
           >
             FAQs
           </Link>
