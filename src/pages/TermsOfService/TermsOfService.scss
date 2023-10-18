@@ -5,6 +5,7 @@
 
 .TermsOfService {
     margin: 1rem;
+    line-height: 2rem;
 
   &__holder {
     margin: 1rem;
@@ -25,7 +26,7 @@
   &__title {
    
     border-radius: 4px;
-    color: white;
+    color: #fd3842;
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
@@ -40,5 +41,10 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+
+  p, li {
+    font-weight: 400;
+  }
+  
   
 }
