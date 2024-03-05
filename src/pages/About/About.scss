@@ -107,6 +107,13 @@
       background-repeat: no-repeat;
       @include tablet-viewport {  background-image: url("../../assets/Jaynew.svg");}
     }
+    &--4 {
+      background-image: url("../../assets/Sanjay.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include tablet-viewport {  background-image: url("../../assets/Sanjay.svg");}
+    }
   
     &::before {
       content: "";
