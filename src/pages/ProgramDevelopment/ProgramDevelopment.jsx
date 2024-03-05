@@ -14,19 +14,20 @@ const ProgramDevelopment = () => {
             <img src={icon} alt="Service Icon" />
           </div>
           <div className="ProgramDevelopment__Holder-title">
-            Threat Risk Assessments, Advisory & Program development
+            Advisory & Program Development
           </div>
         </section>
         <article className="ProgramDevelopment__box">
           <div className="ProgramDevelopment__box-text">
             <div className="ProgramDevelopment__description">
-              Are you launching a new client facing web product, internal or
-              regulatory compliance & audit prep…? Don’t fret, we have all your
-              assessment needs covered. At BespokeCyber we have worked with
-              enterprise as well as small business clients to help them better
-              understand any risks that may not have been identified, create
-              mitigation and action plans e.t.c. to help mature your security
-              program where you feel you need it the most…
+              Whether you need an interim CISO, additional support for your
+              current CISO, or a long-term solution, Bespoke's Virtual CISO
+              Advisory Services provide essential leadership. Our experienced
+              team offers guidance in the complex cybersecurity landscape, with
+              expertise in C-suite advisory across diverse industries and
+              company sizes. From day one, we'll collaborate with you to create
+              tailored information security strategies to meet your unique needs
+              and challenges.
             </div>
             <div className="ProgramDevelopment__offering">Included:</div>
             <div className="ProgramDevelopment__offering-list">
@@ -37,7 +38,7 @@ const ProgramDevelopment = () => {
                     src={listIcon}
                     alt="List Icon"
                   />
-                  Policy, standards and process development
+                  Expert advisory that safeguards your business
                 </li>
                 <li className="ProgramDevelopment__offering-list-holder">
                   <img
@@ -45,8 +46,8 @@ const ProgramDevelopment = () => {
                     src={listIcon}
                     alt="List Icon"
                   />
-                  Regulatory compliance preparation for ISO27001, PCI, GDPR,
-                  HIPPA, SOC Type II
+                  Safeguarding assets, ensuring smooth operations, and building
+                  trust for profit impact
                 </li>
                 <li className="ProgramDevelopment__offering-list-holder">
                   <img
@@ -54,7 +55,8 @@ const ProgramDevelopment = () => {
                     src={listIcon}
                     alt="List Icon"
                   />
-                  Security awareness program development
+                  Establishing a cybersecurity program to prepare for future
+                  threats and vulnerabilities
                 </li>
                 <li className="ProgramDevelopment__offering-list-holder">
                   <img
@@ -62,31 +64,9 @@ const ProgramDevelopment = () => {
                     src={listIcon}
                     alt="List Icon"
                   />
-                  Threat risk assessments
-                </li>
-                <li className="ProgramDevelopment__offering-list-holder">
-                  <img
-                    className="ProgramDevelopment__offering-listIcon"
-                    src={listIcon}
-                    alt="List Icon"
-                  />
-                  Cloud migration assessments
-                </li>
-                <li className="ProgramDevelopment__offering-list-holder">
-                  <img
-                    className="ProgramDevelopment__offering-listIcon"
-                    src={listIcon}
-                    alt="List Icon"
-                  />
-                  3rd Party / Managed service assessments
-                </li>
-                <li className="ProgramDevelopment__offering-list-holder">
-                  <img
-                    className="ProgramDevelopment__offering-listIcon"
-                    src={listIcon}
-                    alt="List Icon"
-                  />
-                  Business Contingency & Incident response plan development
+                  Our cybersecurity expertise elevates staff awareness and
+                  nurtures a culture of digital security within your
+                  organization
                 </li>
               </ul>
             </div>
@@ -98,15 +78,17 @@ const ProgramDevelopment = () => {
           />
         </article>
         <div className="ProgramDevelopment__benefit">
-          Threat Risk Assessments, Advisory & Program development
+          Benefits of Advisory & Program Development
         </div>
         <div className="ProgramDevelopment__benefit__text">
-          Many organizations see security as a burden, something that comes
-          after the cool product you just built… but at Bespoke we know that
-          there is true value in cyber security, not just a box for you to
-          check, we know your clients will have trust in your product when they
-          know it is secure… security is not just a safety blanket, it’s a sales
-          tool too!
+          If your company doesn't have a dedicated cybersecurity team or is
+          looking to enhance its existing cybersecurity efforts, our
+          Cybersecurity Advisory and Program Development services are here to
+          assist. We offer cost-effective, expert-driven solutions tailored to
+          businesses of all sizes. Our advisory services provide strategic
+          guidance and recommendations, while our program development services
+          help you establish robust cybersecurity frameworks and practices.
+          Together, they bring numerous advantages to your organization
         </div>
         <div className="ProgramDevelopment__button">
           <Link to="/contact-us">Contact Us</Link>
