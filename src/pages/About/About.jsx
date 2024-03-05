@@ -1,9 +1,5 @@
 import React from "react";
 import "./About.scss";
-<<<<<<< HEAD
-import Work from "../../components/Work/Work";
-=======
->>>>>>> master
 
 const About = () => {
   const jsonData = {
@@ -25,14 +21,11 @@ const About = () => {
         bio: "Malcolm is a seasoned professional with over 25 years of experience in Blockchain, DeFi, and Cyber domains across diverse industries. He has held senior roles at numerous Blockchain startups and Financial Services Companies, including, Willis Towers Watson, Lloyds Banking Group, London Stock Exchange, ZenGate Global, ConsenSys, and Smart Valor. Beyond work, he has a keen passion for music and Tottenham Hotspurs.",
       },
       {
-<<<<<<< HEAD
-=======
         name: "Sanjay",
         role: "Partner | North America Security Advisory",
         bio: "Sanjay is a seasoned Cybersecurity professional with 25+ years' experience, serving diverse clients from non-profits to Fortune 500 firms. Holding industry designations like CISM, CISA, and ITIL, he prioritizes continuous learning and industry updates. Beyond work, Sanjay mentors newcomers, enjoys photography and music production, and treasures time with family.",
       },
       {
->>>>>>> master
         name: "Jay",
         role: "Cybersecurity Consultant",
         bio: "Jay is a dynamic professional with a unique blend of skills in software engineering and cybersecurity. With a passion for technology and a keen eye for detail, Jay excels in creating secure and robust solutions for complex problems. Off the tech radar, Jay has a flair for music production and he's an avid football fanatic, proudly supporting Manchester United.",

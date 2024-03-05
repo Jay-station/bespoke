@@ -68,7 +68,10 @@ export default function App() {
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/about-us" element={<About />} />
             <Route path="/faq" element={<FAQPage />} />
-
+            <Route
+              path="/services/advisory%26program-development"
+              element={<ProgramDevelopment />}
+            />
             <Route
               path="/services/security-testing"
               element={<SecurityTesting />}
@@ -82,10 +85,6 @@ export default function App() {
               element={<BlockchainForensics />}
             />
             <Route path="/services/virtual-ciso" element={<VirtualCiso />} />
-            <Route
-              path="/services/advisory%26program-development"
-              element={<ProgramDevelopment />}
-            />
           </Routes>
           <Footer />
         </BrowserRouter>
