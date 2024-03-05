@@ -1,0 +1,19 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.ServicesPage {
+    background-color: rgb(0, 26, 56);
+    &__Header {
+      margin: 2rem;
+      padding-top: 1rem;
+      text-transform: uppercase;
+      color: #05ccef;
+      font-size: .75rem;
+      @include tablet-viewport {
+        margin: 0rem 4rem;
+        padding: 1rem 0rem;
+      }
+    }
+}

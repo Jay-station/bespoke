@@ -1,0 +1,17 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header__services-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+  }
+  
+  .header__services-dropdown.active {
+    max-height: 500px; 
+  }
+  
+
+  

@@ -1,0 +1,44 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.TermsOfService {
+    margin: 1rem;
+
+  &__holder {
+    margin: 1rem;
+  }
+  &__holder p {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  &__holder a {
+   text-decoration: none;
+   color: inherit;
+   cursor: pointer;
+  }
+  &__holder li {
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+   
+    border-radius: 4px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+   
+  }
+
+  &__descriptions {
+    color: #f5f5f5;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+}

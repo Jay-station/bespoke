@@ -1,0 +1,133 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.PreviewHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &__title {
+    color: rgb(253, 56, 66);
+      padding-top: 1rem;
+      text-align: center;
+  }
+  &__blurb {
+    text-align: left;
+    line-height: 1.7;
+    margin: 1rem;
+    color: #dddddd;
+    font-size: 1.25rem;
+    width: 90%;
+    align-self: center;
+    }
+  }
+
+.Preview {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.PreviewServices {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  @include tablet-viewport {
+    flex-direction: row;
+  }
+
+  & img {
+    height: 3rem;
+  }
+  a {
+    text-decoration: none;
+    color: #05ccef;
+    font-weight: 600;
+  }
+
+  &__holder {
+    padding: 1rem;
+    margin: 1.25rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease; /* Add transition property */
+  
+    @include tablet-viewport {
+      width: 40%;
+      min-height: 25vw;
+    }
+  
+    @include desktop-viewport {
+      max-width: 30%;
+    }
+  }
+  
+
+  &__title {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 0.625rem 0; 
+    z-index: 2;
+  }
+
+  &__list {
+    margin-top: 0.625rem;
+    &-invisible{
+      color: black;
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    margin: 0.625rem 0;
+    color: #dbdbdb;
+  }
+
+  &__link {
+    &:hover {
+      transform: scale(1.05); /* Enlarge on hover */
+    }
+  }
+
+  &__text {
+    @extend .PreviewHeader__blurb;
+    
+  }
+
+  &__label {
+    color: #dbdbdb;
+    @extend .PreviewHeader__blurb;
+    font-size: 3.5rem;
+    @include tablet-viewport {
+      font-size: 4rem;
+    }
+  }
+
+  &__caption {
+    @extend .PreviewHeader__blurb;
+    color: rgb(253, 56, 66);
+  }
+
+  li {
+    color: white;
+    list-style: none;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid white;
+    padding-bottom: 0.5rem; 
+    text-align: left;
+  }
+
+  img {
+    height: 3rem;
+  }  
+}

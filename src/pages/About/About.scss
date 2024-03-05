@@ -1,0 +1,206 @@
+@use "../../" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.About {
+  color: white;
+  // background-color: rgb(0, 26, 56);
+  &__header {
+    margin: 2rem;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    color: #05ccef;
+    font-size: .75rem;
+    @include tablet-viewport {
+      margin: 0rem 4rem;
+      padding: 1rem 0rem;
+    }
+  }
+  &__holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 1rem 1rem 0;
+    @include tablet-viewport {
+      flex-direction: row;
+      margin: 0rem 3rem;
+      padding: 1rem 0rem;
+    }
+  }
+  &__tagline {
+    color: rgb(253, 56, 66);
+    margin: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    @include tablet-viewport {
+      width: 40%;
+    }
+  }
+  &__blurb {
+    line-height: 1.5;
+    margin: 1rem;
+    color: #dddddd;
+    @include tablet-viewport {
+      width: 70%;
+    }
+  }
+}
+
+.Employee {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // background-color: rgb(0, 26, 56);
+  @include tablet-viewport {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  &__holder {
+    // @extend .Employee;
+    @include tablet-viewport {
+      max-width: 30%;
+      // height: 105rem;
+    }
+  }
+  
+
+  &__header {
+    color: white;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.25rem 1rem;
+    min-height: 30vh;
+    border: 0.0625rem solid #f2ff00;
+    filter: grayscale(70%);
+    position: relative;
+  
+    @include tablet-viewport {
+      min-height: 60vh;
+    }
+  
+    &--1 {
+      background-image: url("../../assets/Phil.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+    &--2 {
+      background-image: url("../../assets/Malcom.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+    &--3 {
+      background-image: url("../../assets/Sanjay.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include tablet-viewport {  background-image: url("../../assets/Sanjay.svg");}
+    }
+    &--4 {
+      background-image: url("../../assets/Jayfinal.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include tablet-viewport {  background-image: url("../../assets/Jaynew.svg");}
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Make sure to set the height to cover the entire box */
+      background-color: rgba(0, 0, 0, 0.8); /* Dark grey color with 0.8 opacity (adjust as needed) */
+      mix-blend-mode: multiply; /* Apply multiply blend mode to make the image darker */
+      transition: opacity 0.3s ease; /* Add a smooth transition on hover */
+      opacity: 0; /* Start with 0 opacity so it's not visible initially */
+    }
+  
+    &:hover::before {
+      opacity: 1; /* Make the dark grey overlay fully visible on hover */
+    }
+  }
+  
+
+  img {
+    height: 8rem;
+  }
+
+  &__name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    margin: 0.625rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__role {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: rgb(253, 56, 66);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 1rem;
+  }
+
+  &__bio {
+    font-size: 1rem;
+    color: white;
+    margin: 0.625rem 0;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+//  line-height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+    @include desktop-viewport {
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+
+    &:hover {
+opacity: 1;
+    }
+    
+  }
+}
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  margin-bottom: 2rem;
+}
+
+.success-message {
+  background-color: #4caf50; 
+  color: #fff;
+  padding: 10px; 
+  border-radius: 5px; 
+  text-align: center;
+  width: 30%; 
+}
