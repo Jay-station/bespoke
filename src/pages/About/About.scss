@@ -52,17 +52,24 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  // background-color: rgb(0, 26, 56);
-  @include tablet-viewport {
-    flex-direction: row;
-    justify-content: space-evenly;
+
+  &__NA,
+  &__EU {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include desktop-viewport {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 
   &__holder {
-    // @extend .Employee;
-    @include tablet-viewport {
-      max-width: 30%;
-      // height: 105rem;
+    @include desktop-viewport {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
     }
   }
   
@@ -71,7 +78,7 @@
     color: white;
   }
 
-  &__box {
+  &__boxNA {
     display: flex;
     flex-direction: column;
     border-radius: 0.5rem;
@@ -94,25 +101,58 @@
     }
   
     &--2 {
-      background-image: url("../../assets/Malcom.svg");
+      background-image: url("../../assets/Sanjay.svg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
     }
   
     &--3 {
-      background-image: url("../../assets/Sanjay.svg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      @include tablet-viewport {  background-image: url("../../assets/Sanjay.svg");}
-    }
-    &--4 {
       background-image: url("../../assets/Jayfinal.svg");
+    
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      @include tablet-viewport {  background-image: url("../../assets/Jaynew.svg");}
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Make sure to set the height to cover the entire box */
+      background-color: rgba(0, 0, 0, 0.8); /* Dark grey color with 0.8 opacity (adjust as needed) */
+      mix-blend-mode: multiply; /* Apply multiply blend mode to make the image darker */
+      transition: opacity 0.3s ease; /* Add a smooth transition on hover */
+      opacity: 0; /* Start with 0 opacity so it's not visible initially */
+    }
+  
+    &:hover::before {
+      opacity: 1; /* Make the dark grey overlay fully visible on hover */
+    }
+  }
+
+  &__boxEU {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.25rem 1rem;
+    min-height: 30vh;
+    border: 0.0625rem solid #f2ff00;
+    filter: grayscale(70%);
+    position: relative;
+  
+    @include tablet-viewport {
+      min-height: 60vh;
+    }
+  
+    &--1 {
+      background-image: url("../../assets/Malcom.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   
     &::before {
@@ -152,7 +192,7 @@
   &__role {
     font-size: 1.25rem;
     font-weight: bold;
-    color: rgb(253, 56, 66);
+    color: #05ccef;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -205,7 +245,12 @@ opacity: 1;
   width: 30%; 
 }
 
- // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(formData);
-  // };
+h3 {
+  color: rgb(253, 56, 66);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
