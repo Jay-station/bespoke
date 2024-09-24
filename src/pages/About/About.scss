@@ -94,19 +94,27 @@
     }
   
     &--2 {
-      background-image: url("../../assets/Malcom.svg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background-image: url("../../assets/Jayfinal.svg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include tablet-viewport {  background-image: url("../../assets/Jaynew.svg");}
     }
   
-    &--3 {
-      background-image: url("../../assets/Jayfinal.svg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      @include tablet-viewport {  background-image: url("../../assets/Jaynew.svg");}
-    }
+    // &--3 {
+    //   background-image: url("../../assets/Sanjay.svg");
+    //   background-size: cover;
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   @include tablet-viewport {  background-image: url("../../assets/Sanjay.svg");}
+    // }
+    // &--4 {
+    //   background-image: url("../../assets/Jayfinal.svg");
+    //   background-size: cover;
+    //   background-position: center;
+    //   background-repeat: no-repeat;
+    //   @include tablet-viewport {  background-image: url("../../assets/Jaynew.svg");}
+    // }
   
     &::before {
       content: "";

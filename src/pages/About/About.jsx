@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.scss";
-import Work from "../../components/Work/Work";
 
 const About = () => {
   const jsonData = {
@@ -16,11 +15,16 @@ const About = () => {
         role: "Partner | North America Security Advisory",
         bio: "Phil is a seasoned cybersecurity professional with almost three decades of IT experience, specializing in Cyber & Privacy for over 15 years. He continuously learns and stays updated with industry changes, currently pursuing Cloud designations alongside holding CISSP, GIAC & ISO27001 designations. Beyond work, he enjoys cooking, exercising, studying martial arts, and cherishing family time.",
       },
-      {
-        name: "Malcolm",
-        role: "Partner | UK & EU Security Advisory",
-        bio: "Malcolm is a seasoned professional with over 25 years of experience in Blockchain, DeFi, and Cyber domains across diverse industries. He has held senior roles at numerous Blockchain startups and Financial Services Companies, including, Willis Towers Watson, Lloyds Banking Group, London Stock Exchange, ZenGate Global, ConsenSys, and Smart Valor. Beyond work, he has a keen passion for music and Tottenham Hotspurs.",
-      },
+      // {
+      //   name: "Malcolm",
+      //   role: "Partner | UK & EU Security Advisory",
+      //   bio: "Malcolm is a seasoned professional with over 25 years of experience in Blockchain, DeFi, and Cyber domains across diverse industries. He has held senior roles at numerous Blockchain startups and Financial Services Companies, including, Willis Towers Watson, Lloyds Banking Group, London Stock Exchange, ZenGate Global, ConsenSys, and Smart Valor. Beyond work, he has a keen passion for music and Tottenham Hotspurs.",
+      // },
+      // {
+      //   name: "Sanjay",
+      //   role: "Partner | North America Security Advisory",
+      //   bio: "Sanjay is a seasoned Cybersecurity professional with 25+ years' experience, serving diverse clients from non-profits to Fortune 500 firms. Holding industry designations like CISM, CISA, and ITIL, he prioritizes continuous learning and industry updates. Beyond work, Sanjay mentors newcomers, enjoys photography and music production, and treasures time with family.",
+      // },
       {
         name: "Jay",
         role: "Cybersecurity Consultant",
